@@ -17,10 +17,14 @@
         </svg>
         <span class="text-xl font-black">HH-clone</span>
     </a>
-    <div>
+    <div class="flex gap-2">
+        <a href="#"
+           class="bg-gray-200 hover:bg-gray-300 focus:bg-gray-300 py-2 px-4 text-gray-900 font-semibold shadow-lg hover:shadow-xl focus:shadow-xl focus:outline-none">
+            Sign In
+        </a>
         <a href="#"
            class="bg-red-500 hover:bg-red-600 focus:bg-red-600 py-2 px-4 text-white font-semibold shadow-lg hover:shadow-xl focus:shadow-xl focus:outline-none">
-            Sign in
+            Sign Up
         </a>
     </div>
 </header>
@@ -30,37 +34,29 @@
         <svg class="h-12 mx-auto text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
              stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
+                  d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/>
         </svg>
-        <h2 class="text-3xl font-bold text-gray-900 mt-2">Registration</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2">Reset Password</h2>
     </div>
     <div class="bg-white mt-7 mx-auto shadow-xl p-10 w-full max-w-md">
         <form method="post" action="{{ route('registerCreate') }}" class="space-y-6">
             @csrf
             <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <label for="email" class="block text-sm font-bold text-gray-700">E-mail</label>
                 <div class="shadow-sm mt-1">
-                    <input type="text" id="name" name="name" required
+                    <input type="email" id="email" name="email"
                            class="border-gray-300 hover:border-gray-400 focus:border-red-500 focus:ring-red-500 text-sm w-full">
                 </div>
             </div>
             <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-                <div class="shadow-sm mt-1">
-                    <input type="email" id="email" name="email" required
-                           class="border-gray-300 hover:border-gray-400 focus:border-red-500 focus:ring-red-500 text-sm w-full">
-                </div>
-                <p class="mt-2 text-sm text-red-600">E-mail must be valid.</p>
-            </div>
-            <div>
-                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <label for="password" class="block text-sm font-bold text-gray-700">Password</label>
                 <div class="shadow-sm mt-1">
                     <input type="password" id="password" name="password" minlength="8"
                            class="border-gray-300 hover:border-gray-400 focus:border-red-500 focus:ring-red-500 text-sm w-full">
                 </div>
             </div>
             <div>
-                <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Repeat
+                <label for="password_confirmation" class="block text-sm font-bold text-gray-700">Repeat
                     password</label>
                 <div class="shadow-sm mt-1">
                     <input type="password" id="password_confirmation" name="password_confirmation" minlength="8"
@@ -71,17 +67,11 @@
                 <a href="#"
                    class="flex justify-center items-center bg-red-500 hover:bg-red-600 focus:bg-red-600 py-2 px-4 text-white font-semibold shadow-lg
                     hover:shadow-xl focus:shadow-xl focus:outline-none">
-                    Sign up
+                    Reset Password
                 </a>
             </div>
         </form>
-        <div class="flex justify-center items-center mt-4">
-            <a href="#" class="text-sm underline font-medium text-gray-700 hover:text-black focus:text-black">
-                Already have an account?
-            </a>
-        </div>
     </div>
 </main>
 </body>
 </html>
-

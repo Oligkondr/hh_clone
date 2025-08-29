@@ -17,28 +17,32 @@
         </svg>
         <span class="text-xl font-black">HH-clone</span>
     </a>
-    <div>
+    <div class="flex gap-2">
+        <a href="#"
+           class="bg-gray-200 hover:bg-gray-300 focus:bg-gray-300 py-2 px-4 text-gray-900 font-semibold shadow-lg hover:shadow-xl focus:shadow-xl focus:outline-none">
+            Sign In
+        </a>
         <a href="#"
            class="bg-red-500 hover:bg-red-600 focus:bg-red-600 py-2 px-4 text-white font-semibold shadow-lg hover:shadow-xl focus:shadow-xl focus:outline-none">
-            Sign up
+            Sign Up
         </a>
     </div>
 </header>
 
 <main class="flex flex-col justify-center p-6 pb-12">
     <div class="mx-auto max-w-md">
-        <svg class="h-12 mx-auto text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-             stroke-width="1.5" stroke="currentColor">
+        <svg class="h-12 mx-auto text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"/>
+                  d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"/>
         </svg>
-
-        <h2 class="text-3xl font-bold text-gray-900 mt-2">Welcome back</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2">Password Recovery</h2>
     </div>
     <div class="bg-white mt-7 mx-auto shadow-xl p-10 w-full max-w-md">
-        <div class="bg-red-50 border border-red-500 p-4">
-            <h3 class="text-sm font-medium text-red-800">Incorrect data. Failed to log in.</h3>
+        <div class="bg-gray-50 border border-gray-500 p-4">
+            <h3 class="text-sm font-medium text-gray-800">Link sent.</h3>
         </div>
+
         <form method="post" action="{{ route('registerCreate') }}" class="space-y-6 mt-6">
             @csrf
             <div>
@@ -49,28 +53,10 @@
                 </div>
             </div>
             <div>
-                <label for="password" class="block text-sm font-bold text-gray-700">Password</label>
-                <div class="shadow-sm mt-1">
-                    <input type="password" id="password" name="password" minlength="8"
-                           class="border-gray-300 hover:border-gray-400 focus:border-red-500 focus:ring-red-500 text-sm w-full">
-                </div>
-            </div>
-            <div class="flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                    <input type="checkbox" id="remember" name="remember"
-                           class="h-4 w-4 border-gray-300 text-red-500 focus:ring-red-500 cursor-pointer">
-                    <label for="remember" class="text-sm text-gray-700 cursor-pointer hover:text-black">Remember
-                        me</label>
-                </div>
-                <a href="#" class="text-sm underline font-medium text-gray-700 hover:text-black focus:text-black">
-                    Forgot your password?
-                </a>
-            </div>
-            <div>
                 <a href="#"
-                   class="flex justify-center items-center bg-red-500 hover:bg-red-600 focus:bg-red-600 py-2 px-4 text-white font-semibold shadow-lg
+                   class="flex justify-center items-center bg-gray-700 hover:bg-black focus:bg-black py-2 px-4 text-white font-semibold shadow-lg
                     hover:shadow-xl focus:shadow-xl focus:outline-none">
-                    Sign in
+                    Recover
                 </a>
             </div>
         </form>
@@ -78,13 +64,3 @@
 </main>
 </body>
 </html>
-
-
-{{--<form method="post" action="{{ route('authentication') }}">--}}
-{{--    @csrf--}}
-{{--    <label>E-mail</label>--}}
-{{--    <input type="email" name="email" value="">--}}
-{{--    <label>Password</label>--}}
-{{--    <input type="password" name="password" value="">--}}
-{{--    <button type="submit">Go log</button>--}}
-{{--</form>--}}
